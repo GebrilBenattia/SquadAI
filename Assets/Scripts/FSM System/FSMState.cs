@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New State", menuName = "FSM/State")]
+[CreateAssetMenu(fileName = "New FSMState", menuName = "FSM/State")]
 public sealed class FSMState : FSMBaseState
 {
     // ######################################### VARIABLES ########################################

@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player : Pawn
 {
-    public override void OnPossess()
+    [SerializeField] private InputActionReference m_DesiredVelocity;
+
+    private void Awake()
     {
-        
+
     }
 
-    public override void UnPossess()
+    private void Update()
     {
-        
+        Move(m_DesiredVelocity.action.ReadValue<Vector3>());
     }
 }

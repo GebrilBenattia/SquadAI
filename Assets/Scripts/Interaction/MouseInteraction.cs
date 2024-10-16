@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class MouseInteraction : MonoBehaviour
 {
-    [SerializeField] private PlayerController m_Controller;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -26,7 +24,7 @@ public class MouseInteraction : MonoBehaviour
         if (Physics.Raycast(ray, out hit) && hit.transform.gameObject.CompareTag("Pawn")) {
             Transform objectHit = hit.transform;
 
-            m_Controller.controlledPawn = objectHit.gameObject.GetComponent<Pawn>();
+            //m_Controller.controlledPawn = objectHit.gameObject.GetComponent<Pawn>();
         }
     }
 }

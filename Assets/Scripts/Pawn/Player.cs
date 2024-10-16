@@ -14,6 +14,7 @@ public class Player : Pawn
 
     private void Update()
     {
+        FaceMouse();
         Move(m_DesiredVelocity.action.ReadValue<Vector3>());
     }
 }

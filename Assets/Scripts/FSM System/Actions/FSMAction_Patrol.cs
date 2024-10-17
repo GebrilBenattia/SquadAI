@@ -14,6 +14,9 @@ public class FSMAction_Patrol : FSMAction
 
     // ######################################### FUNCTIONS ########################################
 
+    public override void Begin(FSMBaseStateMachine _StateMachine) {}
+    public override void Stop(FSMBaseStateMachine _StateMachine) {}
+
     public override void Execute(FSMBaseStateMachine _StateMachine)
     {
         // Get navMeshAgent

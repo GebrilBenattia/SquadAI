@@ -20,13 +20,15 @@ public class FSMBaseStateMachine : MonoBehaviour
 
     private void Awake()
     {
-        currentState = m_InitialState;
+        SetState(m_InitialState);
         m_CachedComponents = new Dictionary<Type, Component>();
     }
-
-    private void Update()
+    
+    public void SetState(FSMBaseState _State)
     {
-        currentState.Execute(this);
+        currentState?.Stop(this);
+        currentState = _State;
+        currentState.Begin(this);
     }
 
     public new T GetComponent<T>() where T : Component
@@ -40,5 +42,10 @@ public class FSMBaseStateMachine : MonoBehaviour
         if (component != null)
             m_CachedComponents.Add(typeof(T), component);
         return component;
+    }
+
+    private void Update()
+    {
+        currentState.Execute(this);
     }
 }

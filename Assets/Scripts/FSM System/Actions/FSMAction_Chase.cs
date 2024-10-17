@@ -8,10 +8,18 @@ public class FSMAction_Chase : FSMAction
 {
     // ######################################### FUNCTIONS ########################################
 
+    public override void Begin(FSMBaseStateMachine _StateMachine) { }
+
+    public override void Stop(FSMBaseStateMachine _StateMachine) 
+    {
+        NavMeshAgent agent = _StateMachine.GetComponent<NavMeshAgent>();
+        agent.SetDestination(_StateMachine.transform.position);
+    }
+
     public override void Execute(FSMBaseStateMachine _StateMachine)
     {
         NavMeshAgent agent = _StateMachine.GetComponent<NavMeshAgent>();
-        EnemySightSensor sightSensor = _StateMachine.GetComponent<EnemySightSensor>();
+        SightSensor sightSensor = _StateMachine.GetComponent<SightSensor>();
         if (sightSensor.isObjectDetected) agent.SetDestination(sightSensor.detectedObject.transform.position);
     }
 }

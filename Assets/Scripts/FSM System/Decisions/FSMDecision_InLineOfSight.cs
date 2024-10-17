@@ -15,7 +15,7 @@ public class FSMDecision_InLineOfSight : FSMDecision
 
     public override bool Decide(FSMBaseStateMachine _StateMachine)
     {
-        EnemySightSensor sightSensor = _StateMachine.GetComponent<EnemySightSensor>();
+        SightSensor sightSensor = _StateMachine.GetComponent<SightSensor>();
         return sightSensor.isObjectDetected == m_CheckIsInLine;
     }
 }

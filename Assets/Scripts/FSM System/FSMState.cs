@@ -13,6 +13,16 @@ public sealed class FSMState : FSMBaseState
 
     // ######################################### FUNCTIONS ########################################
 
+    public override void Begin(FSMBaseStateMachine _StateMachine)
+    {
+        for (int i = 0; i < actions.Count; i++) actions[i].Begin(_StateMachine);
+    }
+
+    public override void Stop(FSMBaseStateMachine _StateMachine)
+    {
+        for (int i = 0; i < actions.Count; i++) actions[i].Stop(_StateMachine);
+    }
+
     public override void Execute(FSMBaseStateMachine _StateMachine)
     {
         for (int i = 0; i < actions.Count; i++) actions[i].Execute(_StateMachine);

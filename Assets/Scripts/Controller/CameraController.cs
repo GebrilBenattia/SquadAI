@@ -12,7 +12,7 @@ public struct CameraArmProperties
     [Min(1f)] public float zoomSpeed;
     [HideInInspector] public float zoomFactor;
 
-    // Init the Properties with default set of values 
+    // Initializes struct fields with default values, struct fields initializers are availaible for version 10.0 of C# or greater, current is 9.O
     public void InitAsDefault()
     {
         smoothing = 10f;

@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Player : Pawn
+public class Player : Character
 {
     [SerializeField] private InputActionReference m_DesiredVelocity;
 
+    [SerializeField] private ProjectileLaunchSettings m_LaunchSettings;
+
     private void Awake()
+    {
+
+    }
+
+    private void Start()
     {
 
     }
@@ -16,5 +23,10 @@ public class Player : Pawn
     {
         FaceMouse();
         Move(m_DesiredVelocity.action.ReadValue<Vector3>());
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<FireSystem>().LauchSingleProjectile(gameObject.transform, m_LaunchSettings);
+        }
     }
 }

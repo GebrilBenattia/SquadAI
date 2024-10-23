@@ -3968,7 +3968,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &446810043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3985,7 +3985,7 @@ MonoBehaviour:
     type: 3}
   m_SquadAgentPrefab: {fileID: 717157312602318015, guid: 0e2a6209a7328bc4ea9a33dc7e305a59,
     type: 3}
-  m_AgentCount: 9
+  m_AgentCount: 10
 --- !u!4 &446810044
 Transform:
   m_ObjectHideFlags: 0
@@ -14527,7 +14527,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1686127054
 Transform:
   m_ObjectHideFlags: 0
@@ -14559,7 +14559,7 @@ MonoBehaviour:
     type: 3}
   m_SquadAgentPrefab: {fileID: 717157312602318015, guid: 0e2a6209a7328bc4ea9a33dc7e305a59,
     type: 3}
-  m_AgentCount: 21
+  m_AgentCount: 10
 --- !u!1001 &1686235511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14706,7 +14706,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1700247344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14723,7 +14723,7 @@ MonoBehaviour:
     type: 3}
   m_SquadAgentPrefab: {fileID: 717157312602318015, guid: 0e2a6209a7328bc4ea9a33dc7e305a59,
     type: 3}
-  m_AgentCount: 6
+  m_AgentCount: 10
 --- !u!4 &1700247345
 Transform:
   m_ObjectHideFlags: 0
@@ -17766,7 +17766,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2134069789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17783,7 +17783,7 @@ MonoBehaviour:
     type: 3}
   m_SquadAgentPrefab: {fileID: 717157312602318015, guid: 0e2a6209a7328bc4ea9a33dc7e305a59,
     type: 3}
-  m_AgentCount: 60
+  m_AgentCount: 10
 --- !u!4 &2134069790
 Transform:
   m_ObjectHideFlags: 0
@@ -18095,7 +18095,7 @@ PrefabInstance:
     - target: {fileID: 5184454003499939142, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}
       propertyPath: _teamIndex
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5887363148159893513, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}

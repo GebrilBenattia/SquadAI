@@ -13,6 +13,8 @@ public class Character : Pawn, IDamageable
     [SerializeField][Min(0f)] private float m_MovementSpeed = 5f;
     public float MovementSpeed { get { return m_MovementSpeed; } }
 
+    public Vector3 targetPoint;
+
     void Start()
     {
         m_IsDead = false;

@@ -24,9 +24,9 @@ public class Player : Character
         FaceMouse();
         Move(m_DesiredVelocity.action.ReadValue<Vector3>());
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GetComponent<FireSystem>().LauchSingleProjectile(gameObject.transform, m_LaunchSettings);
-        }
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //{
+        //    GetComponent<FireSystem>().LauchSingleProjectile(gameObject.transform, m_LaunchSettings);
+        //}
     }
 }

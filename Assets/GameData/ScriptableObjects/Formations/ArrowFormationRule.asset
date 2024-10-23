@@ -9,10 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7e6461279f1e34e8a96bc4bbfcce43, type: 3}
-  m_Name: BulletData_Turret
+  m_Script: {fileID: 11500000, guid: 68cbc9d83f574fd4eb3ec65a87b92efc, type: 3}
+  m_Name: ArrowFormationRule
   m_EditorClassIdentifier: 
-  prefab: {fileID: 313275668666467587, guid: 3d146e9a04ed9824d99cc5b529f7f74f, type: 3}
-  damage: 10
-  speed: 30
-  lifeTime: 3
+  Distance: 3

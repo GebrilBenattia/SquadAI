@@ -11,17 +11,18 @@ public class AgentSquadController : MonoBehaviour
     [SerializeField] private GameObject m_LeaderPrefab;
     [SerializeField] private GameObject m_SquadAgentPrefab;
     [SerializeField][Min(1)] private int m_AgentCount;
+    [SerializeField] private FormationRule m_FormationRule;
 
     // Private Variables
-    private Agent m_Leader;
+    private GameObject m_Leader;
     private List<SquadAgent> m_SquadAgents = new List<SquadAgent>();
 
     // ######################################### FUNCTIONS ########################################
 
     private void Awake()
     {
-        m_Leader = Instantiate(m_LeaderPrefab, transform.position, Quaternion.identity).GetComponent<Agent>();
-        int squadAgentCount = m_AgentCount - 1;
+        m_Leader = m_LeaderPrefab;//= Instantiate(m_LeaderPrefab, transform.position, Quaternion.identity).GetComponent<SquadAgent>();
+        int squadAgentCount = m_AgentCount;
         for (int i = 0; i < squadAgentCount; i++) {
             m_SquadAgents.Add(Instantiate(m_SquadAgentPrefab, GetFollowPoint(i), Quaternion.identity).GetComponent<SquadAgent>());
         }
@@ -29,14 +30,13 @@ public class AgentSquadController : MonoBehaviour
 
     private Vector3 GetFollowPoint(int _AgentIndex)
     {
-        if (_AgentIndex <= 3) return m_Leader.transform.position - m_Leader.transform.right * 1.5f + _AgentIndex * m_Leader.transform.right - m_Leader.transform.forward;
-        return m_SquadAgents[_AgentIndex - 4].transform.position - m_SquadAgents[_AgentIndex - 4].transform.forward;
+        return m_FormationRule.ComputeFormation(m_Leader.transform, _AgentIndex, m_AgentCount);
     }
 
     private void Update()
     {
-        int squadAgentCount = m_AgentCount - 1;
-        for (int i = 0; i < squadAgentCount; i++) {
+        int squadAgentCount = m_AgentCount;
+        for (int i = 0; i < m_AgentCount; i++) {
             m_SquadAgents[i].followPoint = GetFollowPoint(i);
         }
     }

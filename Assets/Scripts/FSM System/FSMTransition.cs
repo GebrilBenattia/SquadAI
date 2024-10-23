@@ -18,7 +18,8 @@ public sealed class FSMTransition : ScriptableObject
     public void Execute(FSMBaseStateMachine _StateMachine)
     {
         // Check for true state
-        if (decision.Decide(_StateMachine) && !(trueState is FSMRemainInState)) {
+        if (decision.Decide(_StateMachine)) {
+            if (trueState is FSMRemainInState) return;
             _StateMachine.SetState(trueState);
         }
         // Check for false state

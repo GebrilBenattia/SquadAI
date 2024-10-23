@@ -20,6 +20,6 @@ public class FSMAction_Chase : FSMAction
     {
         NavMeshAgent agent = _StateMachine.GetComponent<NavMeshAgent>();
         SightSensor sightSensor = _StateMachine.GetComponent<SightSensor>();
-        if (sightSensor.isObjectDetected) agent.SetDestination(sightSensor.detectedObject.transform.position);
+        if (sightSensor.isAgentDetected) agent.SetDestination(sightSensor.detectedAgent.transform.position);
     }
 }

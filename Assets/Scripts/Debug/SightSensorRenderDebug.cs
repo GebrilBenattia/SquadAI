@@ -14,25 +14,28 @@ public class SightSensorRenderDebug : MonoBehaviour
 
     // Sight Sensor Render Settings
     [Header("Sight Sensor Render Settings")]
+    [SerializeField] private bool m_EnableRenderGizmos;
     [SerializeField] private bool m_EnableDebug;
     public Material lineMaterial;
-    [SerializeField] private Color m_CircleColor;
+    [SerializeField] private Color m_MaxSightRadiusColor;
+    [SerializeField] private Color m_MinSightRadiusColor;
     [SerializeField] private Color m_SightAngleColor;
-    [SerializeField] private Color m_CircleTriggeredColor;
-    [SerializeField] private Color m_SightAngleTriggeredColor;
+    [SerializeField] private Color m_TriggeredMaxSightRadiusColor;
+    [SerializeField] private Color m_TriggeredMinSightRadiusColor;
+    [SerializeField] private Color m_TriggeredSightAngleColor;
+    [SerializeField] private Color m_LineToTargetColor;
 
     // ###################################### GETTER / SETTER #####################################
 
-    public bool enableDebug
-    { get { return m_EnableDebug; } }
-    public Color circleColor
-    {  get { return m_CircleColor; } }
-    public Color sightAngleColor
-    { get {  return m_SightAngleColor; } }
-    public Color circleTriggeredColor
-    { get { return m_CircleTriggeredColor; } }
-    public Color sightAngleTriggeredColor
-    { get { return m_SightAngleTriggeredColor; } }
+    public bool enableRenderGizmos => m_EnableRenderGizmos;
+    public bool enableDebug => m_EnableDebug;
+    public Color maxSightRadiusColor => m_MaxSightRadiusColor;
+    public Color minSightRadiusColor => m_MinSightRadiusColor;
+    public Color sightAngleColor => m_SightAngleColor;
+    public Color triggeredMaxSightRadiusColor => m_TriggeredMaxSightRadiusColor;
+    public Color triggeredMinSightRadiusColor => m_TriggeredMinSightRadiusColor;
+    public Color triggeredSightAngleColor => m_TriggeredSightAngleColor;
+    public Color lineToTargetColor => m_LineToTargetColor;
 
     // ######################################### FUNCTIONS ########################################
 

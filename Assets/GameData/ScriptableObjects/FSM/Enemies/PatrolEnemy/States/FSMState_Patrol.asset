@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4fce2d539c2e114cac2622f2c863d68, type: 3}
+  m_Name: FSMState_Patrol
+  m_EditorClassIdentifier: 
+  actions:
+  - {fileID: 11400000, guid: e14406c8aff12d641878d0852e2dc5dc, type: 2}
+  transitions:
+  - {fileID: 11400000, guid: 79e7cf664d60f2c428a9314f059d8948, type: 2}

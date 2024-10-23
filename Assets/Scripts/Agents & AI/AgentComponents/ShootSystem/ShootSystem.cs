@@ -19,6 +19,7 @@ public class ShootSystem : MonoBehaviour
     // Private Variables
     private float m_MaxCooldown;
     private float m_Cooldown = 0f;
+    private Agent m_Agent;
 
     // ###################################### GETTER / SETTER #####################################
 
@@ -29,6 +30,7 @@ public class ShootSystem : MonoBehaviour
     private void Awake()
     {
         m_MaxCooldown = 1f / m_FireRate;
+        m_Agent = GetComponent<Agent>();
     }
 
     public void Fire()
@@ -38,7 +40,7 @@ public class ShootSystem : MonoBehaviour
 
         // Update Cooldown then spawn bullet
         m_Cooldown += m_MaxCooldown;
-        m_BulletData.Spawn(m_MuzzleSocket.position, m_MuzzleSocket.rotation);
+        m_BulletData.Spawn(m_MuzzleSocket.position, m_MuzzleSocket.rotation, m_Agent.teamIndex);
     }
 
     private void Update()

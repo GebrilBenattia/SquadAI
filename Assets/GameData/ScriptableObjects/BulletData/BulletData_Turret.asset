@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7e6461279f1e34e8a96bc4bbfcce43, type: 3}
   m_Name: BulletData_Turret
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3436813021645615171, guid: 3d146e9a04ed9824d99cc5b529f7f74f, type: 3}
-  damage: 10
+  prefab: {fileID: 5967392258803852595, guid: ac923cc4c8079de45870185308a75b98, type: 3}
+  damage: 1
   speed: 30
   lifeTime: 3

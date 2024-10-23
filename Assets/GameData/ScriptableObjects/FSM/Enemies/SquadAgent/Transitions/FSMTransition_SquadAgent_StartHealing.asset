@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 859f9214c92c8104d95aac1b963f1b08, type: 3}
+  m_Name: FSMTransition_SquadAgent_StartHealing
+  m_EditorClassIdentifier: 
+  decision: {fileID: 11400000, guid: 93ba8a80ea1990e47b7186e0ba61d56d, type: 2}
+  trueState: {fileID: 11400000, guid: aee1a39b79284e645a68ad1667f671f8, type: 2}
+  falseState: {fileID: 11400000, guid: 8289a71651a651148873d0300a85b9fd, type: 2}

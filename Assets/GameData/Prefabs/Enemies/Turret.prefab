@@ -40,14 +40,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 623867994412889677}
-  - component: {fileID: 7722748659179227670}
+  - component: {fileID: 433202445415491310}
   - component: {fileID: 1008489481563332270}
   - component: {fileID: 6325988444904832275}
   - component: {fileID: 2647080133856281292}
   - component: {fileID: 6545489881917800882}
   m_Layer: 6
   m_Name: Turret
-  m_TagString: Untagged
+  m_TagString: Agent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,8 +68,8 @@ Transform:
   - {fileID: 3935656149362055002}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &7722748659179227670
-SphereCollider:
+--- !u!65 &433202445415491310
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -87,8 +87,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.2
-  m_Center: {x: 0, y: 0.5, z: 0}
+  m_Size: {x: 2.449894, y: 1.7046973, z: 2.4822998}
+  m_Center: {x: 0.0040454865, y: 0.8464474, z: -0.0040512085}
 --- !u!114 &1008489481563332270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,8 +101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f05fd338975f254b9f0ef3bcf926d01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 0
+  _maxHealth: 0
   _rotationSpeed: 3
+  _teamIndex: -1
   m_Rotator: {fileID: 9076959772146620526}
   m_MuzzleSocket: {fileID: 6136127118208859313}
 --- !u!114 &6325988444904832275
@@ -120,8 +121,8 @@ MonoBehaviour:
   m_SightLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  m_SightMaxRadius: 18
-  m_SightMinRadius: 18
+  m_SightMaxRadius: 15
+  m_SightMinRadius: 15
   m_SightAngle: 360
 --- !u!114 &2647080133856281292
 MonoBehaviour:
@@ -138,7 +139,7 @@ MonoBehaviour:
   m_MuzzleSocket: {fileID: 6136127118208859313}
   m_BulletData: {fileID: 11400000, guid: c7247a8f833dde947a825b05cba8cff8, type: 2}
   m_FireRate: 5
-  m_ShootRadius: 14
+  m_ShootRadius: 15
 --- !u!114 &6545489881917800882
 MonoBehaviour:
   m_ObjectHideFlags: 0

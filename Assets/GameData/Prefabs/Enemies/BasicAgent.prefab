@@ -96,13 +96,13 @@ GameObject:
   - component: {fileID: 5887363148159893513}
   - component: {fileID: 5799966220046773570}
   - component: {fileID: 6777589321771687380}
-  - component: {fileID: 5184454003499939142}
+  - component: {fileID: 8843298314988361022}
   - component: {fileID: 3984077389491282502}
   - component: {fileID: 4472312476963061085}
   - component: {fileID: 692406536760233311}
   m_Layer: 6
   m_Name: BasicAgent
-  m_TagString: Untagged
+  m_TagString: Agent
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -221,7 +221,7 @@ NavMeshAgent:
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &5184454003499939142
+--- !u!114 &8843298314988361022
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -230,11 +230,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 717157312602318015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cd54671845277e4f939d1127f468c67, type: 3}
+  m_Script: {fileID: 11500000, guid: 9900e7f776c6ccf42a67e0fefc2b57f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maxLife: 0
+  _maxHealth: 100
   _rotationSpeed: 5
+  _teamIndex: 1
 --- !u!114 &3984077389491282502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -250,7 +251,7 @@ MonoBehaviour:
   m_SightLayerMask:
     serializedVersion: 2
     m_Bits: 64
-  m_SightMaxRadius: 15
+  m_SightMaxRadius: 18
   m_SightMinRadius: 10
   m_SightAngle: 90
 --- !u!114 &4472312476963061085

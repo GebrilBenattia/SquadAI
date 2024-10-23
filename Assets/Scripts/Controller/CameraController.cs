@@ -6,13 +6,13 @@ using UnityEngine;
 public struct CameraArmProperties
 {
     public Transform target;
-    [Min(0.1f)] public float smoothing;
+    [Min(0)] public float smoothing;
     public Vector3 posOffset;
     public Vector2 posOffsetScale;
     [Min(1f)] public float zoomSpeed;
     [HideInInspector] public float zoomFactor;
 
-    // Init the Properties with default set of values 
+    // Initializes struct fields with default values, struct fields initializers are availaible for version 10.0 of C# or greater, current is 9.O
     public void InitAsDefault()
     {
         smoothing = 10f;
@@ -33,10 +33,11 @@ public struct CameraArmProperties
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private CameraArmProperties m_CameraArmProperties;
+    private Vector3 m_CurrentVelocity;
 
     void Start()
     {
-        m_CameraArmProperties.InitAsDefault();
+        //m_CameraArmProperties.InitAsDefault();
 
         if (m_CameraArmProperties.target == null)
             return;
@@ -47,13 +48,11 @@ public class CameraController : MonoBehaviour
     private void Update()
     {
         m_CameraArmProperties.OnZoomChange();
-    }
 
-    void FixedUpdate()
-    {
         if (m_CameraArmProperties.target == null)
             return;
+
         Vector3 targetCamPos = m_CameraArmProperties.target.position + m_CameraArmProperties.posOffset * m_CameraArmProperties.zoomFactor;
-        transform.position = Vector3.Lerp(transform.position, targetCamPos, m_CameraArmProperties.smoothing * Time.fixedDeltaTime);
+        transform.position = targetCamPos;// Vector3.SmoothDamp(transform.position, targetCamPos, ref m_CurrentVelocity, m_CameraArmProperties.smoothing);
     }
 }

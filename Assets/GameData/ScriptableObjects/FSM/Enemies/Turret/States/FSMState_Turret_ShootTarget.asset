@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4fce2d539c2e114cac2622f2c863d68, type: 3}
-  m_Name: FSMState_Turret_Idle
+  m_Name: FSMState_Turret_ShootTarget
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: ca9e4fddf8edb1f45a00aeecb4d18809, type: 2}
+  - {fileID: 11400000, guid: 597b43fb7f0e2fd45a838e06c29002bb, type: 2}
   transitions:
-  - {fileID: 11400000, guid: 33d269ffbd75cba4e8f5101053915c25, type: 2}
-  - {fileID: 11400000, guid: 0bb86f0c6233c6f4bbcd05e13cd9da16, type: 2}
+  - {fileID: 11400000, guid: 923f2b8262f6c36429e2871d97be1c33, type: 2}
+  - {fileID: 11400000, guid: f05ec492217fad74689f17ee00223af0, type: 2}

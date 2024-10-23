@@ -16,6 +16,7 @@ public class SightSensor : MonoBehaviour
 
     // Private Variables
     private Transform m_DetectedAgent;
+    private Agent m_Agent;
 
     // ###################################### GETTER / SETTER #####################################
 
@@ -26,6 +27,11 @@ public class SightSensor : MonoBehaviour
     { get { return m_DetectedAgent != null; } }
 
     // ######################################### FUNCTIONS ########################################
+
+    private void Awake()
+    {
+        m_Agent = GetComponent<Agent>();
+    }
 
     public bool IsInMaxSightRadius()
     {
@@ -55,7 +61,7 @@ public class SightSensor : MonoBehaviour
     {
         // OverlapSphere -> Get all colliders in the radius
         var colliders = Physics.OverlapSphere(transform.position, m_SightMinRadius, m_SightLayerMask);
-        bool agentDetected = false;
+        bool agentIsDetected = false;
 
         // Loop on each colliders
         for (int i = 0; i < colliders.Length; i++) {
@@ -63,17 +69,23 @@ public class SightSensor : MonoBehaviour
             // Ignore self
             if (colliders[i].gameObject == this.gameObject) continue;
 
+            // Check team index
+            Agent agentDetected = colliders[i].GetComponent<Agent>();
+            if (m_Agent && agentDetected) {
+                if (m_Agent.teamIndex == agentDetected.teamIndex) continue;
+            }
+
             // Get the direction vector from current pos to detected collider
             Vector3 dir = colliders[i].transform.position - transform.position;
 
             // Check if the collider is in sight angle
             if (Vector3.Angle(dir, transform.forward) <= m_SightAngle) {
                 m_DetectedAgent = colliders[i].transform;
-                agentDetected = true;
+                agentIsDetected = true;
             }
         }
 
-        if (!agentDetected) {
+        if (!agentIsDetected) {
             m_DetectedAgent = null;
         }
     }

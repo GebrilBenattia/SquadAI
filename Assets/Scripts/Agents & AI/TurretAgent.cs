@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurretAgent : MonoBehaviour
+public class TurretAgent : Agent
 {
     // ######################################### VARIABLES ########################################
 
@@ -10,10 +10,6 @@ public class TurretAgent : MonoBehaviour
     [Header("References")]
     [SerializeField] private Transform m_Rotator;
     [SerializeField] private Transform m_MuzzleSocket;
-
-    // Turret Settings
-    [Header("Turret Settings")]
-    [SerializeField][Min(0)] private float m_RotationSpeed;
 
     // ###################################### GETTER / SETTER #####################################
 
@@ -24,9 +20,9 @@ public class TurretAgent : MonoBehaviour
 
     // ######################################### FUNCTIONS ########################################
 
-    public void SetTargetRotation(Quaternion _Rotation)
+    public override void SetLookRotation(Quaternion _Rotation)
     {
-        m_Rotator.rotation = Quaternion.Lerp(m_Rotator.rotation, _Rotation, Time.deltaTime * m_RotationSpeed);
+        m_Rotator.rotation = Quaternion.Lerp(m_Rotator.rotation, _Rotation, Time.deltaTime * _rotationSpeed);
     }
 
 #if UNITY_EDITOR

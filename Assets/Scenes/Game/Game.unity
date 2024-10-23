@@ -3968,7 +3968,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &446810043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11174,6 +11174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1294407068}
   - component: {fileID: 1294407069}
+  - component: {fileID: 1294407070}
   m_Layer: 0
   m_Name: RenderDebugSettings
   m_TagString: Untagged
@@ -11218,6 +11219,22 @@ MonoBehaviour:
   m_TriggeredMinSightRadiusColor: {r: 1, g: 0.78431374, b: 0, a: 1}
   m_TriggeredSightAngleColor: {r: 1, g: 0.49019608, b: 0, a: 1}
   m_LineToTargetColor: {r: 1, g: 0, b: 0, a: 1}
+--- !u!114 &1294407070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1294407067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bc425e024ec9f49b6f16dea9d0b67a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EnableRenderGizmos: 1
+  m_EnableDebug: 0
+  lineMaterial: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShootRadiusColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &1299012329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14510,7 +14527,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1686127054
 Transform:
   m_ObjectHideFlags: 0
@@ -14689,7 +14706,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1700247344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17749,7 +17766,7 @@ GameObject:
   m_Icon: {fileID: 7250588514170254948, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2134069789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17981,30 +17998,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1008489481563332270, guid: 270182f78b12eeb41b8d3d6efa1ff42b,
+        type: 3}
+      propertyPath: _rotationSpeed
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1847806421479758837, guid: 270182f78b12eeb41b8d3d6efa1ff42b,
         type: 3}
       propertyPath: m_Name
       value: Turret
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325988444904832275, guid: 270182f78b12eeb41b8d3d6efa1ff42b,
-        type: 3}
-      propertyPath: m_SightAngle
-      value: 360
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325988444904832275, guid: 270182f78b12eeb41b8d3d6efa1ff42b,
-        type: 3}
-      propertyPath: m_SightMaxRadius
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325988444904832275, guid: 270182f78b12eeb41b8d3d6efa1ff42b,
-        type: 3}
-      propertyPath: m_SightMinRadius
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6325988444904832275, guid: 270182f78b12eeb41b8d3d6efa1ff42b,
-        type: 3}
-      propertyPath: m_SightLayerMask.m_Bits
-      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18025,35 +18027,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 12228277}
     m_Modifications:
+    - target: {fileID: 299360241408139798, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7a24018e9576214f9559b90e90f8a82, type: 2}
     - target: {fileID: 717157312602318015, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}
       propertyPath: m_Name
-      value: PatrolEnemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 3984077389491282502, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
-        type: 3}
-      propertyPath: m_SightAngle
-      value: 90
+      value: BasicAgent
       objectReference: {fileID: 0}
     - target: {fileID: 3984077389491282502, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}
       propertyPath: m_SightMaxRadius
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3984077389491282502, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
-        type: 3}
-      propertyPath: m_SightMinRadius
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 3984077389491282502, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
-        type: 3}
-      propertyPath: m_SightLayerMask.m_Bits
-      value: 64
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 4961330290916916468, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 48.27
+      value: 58.8
       objectReference: {fileID: 0}
     - target: {fileID: 4961330290916916468, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}
@@ -18063,7 +18055,7 @@ PrefabInstance:
     - target: {fileID: 4961330290916916468, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 123.42
+      value: 136.5
       objectReference: {fileID: 0}
     - target: {fileID: 4961330290916916468, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
         type: 3}
@@ -18100,6 +18092,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5184454003499939142, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
+        type: 3}
+      propertyPath: _teamIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5887363148159893513, guid: ee8f9e0d1535bec4aa4ee81b53cbeb2e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f7a24018e9576214f9559b90e90f8a82, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

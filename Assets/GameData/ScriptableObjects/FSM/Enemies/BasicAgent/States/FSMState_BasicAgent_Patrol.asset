@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4fce2d539c2e114cac2622f2c863d68, type: 3}
-  m_Name: FSMState_Turret_Idle
+  m_Name: FSMState_BasicAgent_Patrol
   m_EditorClassIdentifier: 
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: e14406c8aff12d641878d0852e2dc5dc, type: 2}
   transitions:
-  - {fileID: 11400000, guid: 33d269ffbd75cba4e8f5101053915c25, type: 2}
-  - {fileID: 11400000, guid: 0bb86f0c6233c6f4bbcd05e13cd9da16, type: 2}
+  - {fileID: 11400000, guid: 79e7cf664d60f2c428a9314f059d8948, type: 2}

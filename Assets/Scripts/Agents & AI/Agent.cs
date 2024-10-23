@@ -8,7 +8,18 @@ public class Agent : MonoBehaviour
 
     // Agent Settings
     [Header("Agent Settings")]
-    [SerializeField] private float m_MaxLife;
+    [SerializeField] protected float _maxLife;
+    [SerializeField][Min(0)] protected float _rotationSpeed;
+    [SerializeField] protected int _teamIndex;
 
-    // Protected Variables
+    // ###################################### GETTER / SETTER #####################################
+
+    public int teamIndex => _teamIndex;
+
+    // ######################################### FUNCTIONS ########################################
+
+    public virtual void SetLookRotation(Quaternion _Rotation)
+    {
+        transform.eulerAngles = new Vector3(0, Quaternion.Lerp(transform.rotation, _Rotation, Time.deltaTime * _rotationSpeed).eulerAngles.y, 0);
+    }
 }

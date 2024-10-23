@@ -14,10 +14,15 @@ public class ShootSystem : MonoBehaviour
     [Header("Shoot Settings")]
     [SerializeField] private BulletDataSO m_BulletData;
     [SerializeField] private float m_FireRate;
+    [SerializeField] private float m_ShootRadius;
 
     // Private Variables
     private float m_MaxCooldown;
     private float m_Cooldown = 0f;
+
+    // ###################################### GETTER / SETTER #####################################
+
+    public float shootRadius => m_ShootRadius;
 
     // ######################################### FUNCTIONS ########################################
 
@@ -43,4 +48,33 @@ public class ShootSystem : MonoBehaviour
             m_Cooldown -= Time.deltaTime;
         }
     }
+
+    private void OnRenderObject()
+    {
+        if (!ShootSystemRenderDebug.instance.enableDebug) return;
+
+        // Render Max Circle
+        GLUtils.GLBegin(ref ShootSystemRenderDebug.instance.lineMaterial, GL.LINES, ShootSystemRenderDebug.instance.shootRadiusColor);
+        GLUtils.GLRenderCircle(transform.position, m_ShootRadius, Quaternion.Euler(90, 0, 0));
+        GLUtils.GLEnd();
+    }
+
+#if UNITY_EDITOR
+    private void RenderGizmos()
+    {
+        // Render Max Circle
+        Gizmos.color = ShootSystemRenderDebug.instance.shootRadiusColor;
+        GizmosUtils.RenderCircle(transform.position, m_ShootRadius, Quaternion.Euler(90, 0, 0));
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (!ShootSystemRenderDebug.instance.enableRenderGizmos) RenderGizmos();
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (ShootSystemRenderDebug.instance.enableRenderGizmos) RenderGizmos();
+    }
+#endif
 }

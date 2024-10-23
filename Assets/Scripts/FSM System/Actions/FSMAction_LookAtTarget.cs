@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[CreateAssetMenu(fileName = "New FSMAction_Turret_LookAtTarget", menuName = "FSM/Actions/Turret/LookAtTarget", order = 0)]
-public class FSMAction_Turret_LookAtTarget : FSMAction
+[CreateAssetMenu(fileName = "New FSMAction_LookAtTarget", menuName = "FSM/Actions/LookAtTarget", order = 0)]
+public class FSMAction_LookAtTarget : FSMAction
 {
     // ######################################### FUNCTIONS ########################################
 
@@ -13,11 +13,11 @@ public class FSMAction_Turret_LookAtTarget : FSMAction
 
     public override void Execute(FSMBaseStateMachine _StateMachine)
     {
-        TurretAgent turret = _StateMachine.GetComponent<TurretAgent>();
         SightSensor sightSensor = _StateMachine.GetComponent<SightSensor>();
+        Agent agent = _StateMachine.GetComponent<Agent>();
         if (sightSensor.isAgentDetected) {
-            Vector3 dir = sightSensor.detectedAgent.transform.position - turret.fireSocket.transform.position;
-            turret.SetLookRotation(Quaternion.LookRotation(dir.normalized, Vector3.up));
+            Vector3 dir = sightSensor.detectedAgent.transform.position - agent.transform.position;
+            agent.SetLookRotation(Quaternion.LookRotation(dir.normalized, Vector3.up));
         }
     }
 }

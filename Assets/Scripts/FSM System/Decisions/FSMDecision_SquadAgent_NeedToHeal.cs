@@ -14,6 +14,6 @@ public class FSMDecision_SquadAgent_NeedToHeal : FSMDecision
     public override bool Decide(FSMBaseStateMachine _StateMachine)
     {
         SquadAgent squadAgent = _StateMachine.GetComponent<SquadAgent>();
-        return squadAgent.squadController.canHealPlayer && squadAgent.squadController.leader.health <= m_HealTreshold;
+        return squadAgent.squadController.canHealLeader && squadAgent.squadController.leader.health <= m_HealTreshold;
     }
 }

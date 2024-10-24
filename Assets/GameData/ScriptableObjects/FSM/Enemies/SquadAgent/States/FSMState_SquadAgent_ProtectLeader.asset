@@ -10,13 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4fce2d539c2e114cac2622f2c863d68, type: 3}
-  m_Name: FSMState_SquadAgent_FollowPoint
+  m_Name: FSMState_SquadAgent_ProtectLeader
   m_EditorClassIdentifier: 
   actions:
-  - {fileID: 11400000, guid: 20dfc6fc53af96a4bbd2fd7860e72ebc, type: 2}
-  - {fileID: 11400000, guid: 5552f999477304a4bb905740a3315b85, type: 2}
+  - {fileID: 11400000, guid: 6301a7ab14cbb9e439fa57c605dc2d5c, type: 2}
   transitions:
-  - {fileID: 11400000, guid: 2bc18195ad6cb394ba80b2f855f9e258, type: 2}
-  - {fileID: 11400000, guid: 927bb21df3d5e334687bf01777bd0c59, type: 2}
-  - {fileID: 11400000, guid: f668caf5cbdd8b3488bf899438f6d379, type: 2}
+  - {fileID: 11400000, guid: b21db9637d1597349a3257d26e524418, type: 2}
   - {fileID: 11400000, guid: 3682385a91d2c7447a4300e6953e62ef, type: 2}

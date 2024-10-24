@@ -16,9 +16,9 @@ public class BulletDataSO : ScriptableObject
 
     // ######################################### FUNCTIONS ########################################
 
-    public void Spawn(Vector3 _Position, Quaternion _Rotation, int _OwnerTeamIndex)
+    public void Spawn(Vector3 _Position, Quaternion _Rotation, Agent _Owner)
     {
         var bulletInst = Instantiate(prefab, _Position, _Rotation).GetComponent<Bullet>();
-        bulletInst.Init(this, _OwnerTeamIndex);
+        bulletInst.Init(this, _Owner);
     }
 }

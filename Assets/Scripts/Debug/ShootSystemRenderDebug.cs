@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShootSystemRenderDebug : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class ShootSystemRenderDebug : MonoBehaviour
     { get { return m_Instance; } }
 
     // ######################################### VARIABLES ########################################
+
+    // References
+    [Header("References")]
+    [SerializeField] private Toggle m_Toggle;
 
     // Shoot System Render Settings
     [Header("Shoot System Render Settings")]
@@ -26,6 +31,11 @@ public class ShootSystemRenderDebug : MonoBehaviour
     public Color shootRadiusColor => m_ShootRadiusColor;
 
     // ######################################### FUNCTIONS ########################################
+
+    public void ToggleDebug()
+    {
+        m_EnableDebug = m_Toggle.isOn;
+    }
 
     private void Awake()
     {

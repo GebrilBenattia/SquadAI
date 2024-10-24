@@ -15,13 +15,13 @@ public class FSMAction_SquadAgent_HealLeader : FSMAction
     public override void Begin(FSMBaseStateMachine _StateMachine) 
     {
         SquadAgent squadAgent = _StateMachine.GetComponent<SquadAgent>();
-        squadAgent.squadController.canHealPlayer = false;
+        squadAgent.squadController.canHealLeader = false;
     }
 
     public override void Stop(FSMBaseStateMachine _StateMachine) 
     {
         SquadAgent squadAgent = _StateMachine.GetComponent<SquadAgent>();
-        squadAgent.squadController.canHealPlayer = true;
+        squadAgent.squadController.canHealLeader = true;
         squadAgent.StopHealing();
     }
 
@@ -37,7 +37,7 @@ public class FSMAction_SquadAgent_HealLeader : FSMAction
         }
         else if (squadAgent.healingTime <= 0) {
             squadAgent.squadController.leader.Heal();
-            squadAgent.squadController.canHealPlayer = true;
+            squadAgent.squadController.canHealLeader = true;
             squadAgent.StopHealing();
         }
     }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Properties;
 using UnityEngine;
 
 public class Agent : MonoBehaviour, IDamageable
@@ -39,15 +40,19 @@ public class Agent : MonoBehaviour, IDamageable
         _health = _maxHealth;
     }
 
-    public void AddDamage(float _Damage)
+    protected virtual void EventGetDamaged(Agent _DamageCauser)
+    {
+
+    }
+
+    public void AddDamage(float _Damage, Agent _DamageCauser)
     {
         if (_isDead)
             return;
 
-        if (_health > 0)
-            _health -= _Damage;
+        EventGetDamaged(_DamageCauser);
 
-        else
-            _isDead = true;
+        _health -= _Damage;
+        if (_health <= 0) _isDead = true;
     }
 }

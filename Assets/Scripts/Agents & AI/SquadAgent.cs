@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class SquadAgent : Agent
 {
@@ -10,13 +11,23 @@ public class SquadAgent : Agent
     [NonSerialized] public Vector3 lookAtPoint;
     [NonSerialized] public AgentSquadController squadController;
     [NonSerialized] public bool isHealing = false;
+    [NonSerialized] public bool isProtecting = false;
 
     // Private Variables
+    private NavMeshAgent m_NavMeshAgent;
+    private float m_BaseStoppingDistance;
     private float m_HealingTime;
 
     public float healingTime => m_HealingTime;
 
     // ######################################### FUNCTIONS ########################################
+
+    private void Awake()
+    {
+        _health = _maxHealth;
+        m_NavMeshAgent = GetComponent<NavMeshAgent>();
+        m_BaseStoppingDistance = m_NavMeshAgent.stoppingDistance;
+    }
 
     public void Init(AgentSquadController _AgentSquadController)
     {
@@ -32,6 +43,18 @@ public class SquadAgent : Agent
     public void StopHealing()
     {
         isHealing = false;
+    }
+
+    public void StartProtecting()
+    {
+        isProtecting = true;
+        m_NavMeshAgent.stoppingDistance = 0.1f;
+    }
+
+    public void StopProtecting()
+    {
+        isProtecting = false;
+        m_NavMeshAgent.stoppingDistance = m_BaseStoppingDistance;
     }
 
     private void Update()

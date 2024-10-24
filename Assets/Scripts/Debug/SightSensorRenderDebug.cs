@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SightSensorRenderDebug : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class SightSensorRenderDebug : MonoBehaviour
     { get { return m_Instance; } }
 
     // ######################################### VARIABLES ########################################
+
+    // References
+    [Header("References")]
+    [SerializeField] private Toggle m_Toggle;
 
     // Sight Sensor Render Settings
     [Header("Sight Sensor Render Settings")]
@@ -38,6 +43,11 @@ public class SightSensorRenderDebug : MonoBehaviour
     public Color lineToTargetColor => m_LineToTargetColor;
 
     // ######################################### FUNCTIONS ########################################
+
+    public void ToggleDebug()
+    {
+        m_EnableDebug = m_Toggle.isOn;
+    }
 
     private void Awake()
     {

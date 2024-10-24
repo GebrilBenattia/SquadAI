@@ -40,7 +40,7 @@ public class ShootSystem : MonoBehaviour
 
         // Update Cooldown then spawn bullet
         m_Cooldown += m_MaxCooldown;
-        m_BulletData.Spawn(m_MuzzleSocket.position, m_MuzzleSocket.rotation, m_Agent.teamIndex);
+        m_BulletData.Spawn(m_MuzzleSocket.position, m_MuzzleSocket.rotation, m_Agent);
     }
 
     private void Update()

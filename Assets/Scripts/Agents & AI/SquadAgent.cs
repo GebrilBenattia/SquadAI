@@ -60,6 +60,9 @@ public class SquadAgent : Agent
     private void Update()
     {
         if (_isDead) {
+            if (isHealing) squadController.canHealLeader = true;
+            if (isProtecting) squadController.canProtectLeader = true;
+
             squadController.RemoveAgent(this);
             Destroy(gameObject);
         }

@@ -17,7 +17,7 @@ public class AgentSquadController : MonoBehaviour
     [Header("Agent Squad Controller Settings")]
     [SerializeField] private AgentPlayer m_LeaderAgent;
     [SerializeField] private GameObject m_SquadAgentPrefab;
-    [SerializeField][Min(1)] private int m_AgentCount;
+    [SerializeField][Min(0)] private int m_AgentCount;
     [SerializeField] private FormationRule m_CurrentFormationRule;
     [SerializeField] private FormationRule m_CircleFormationRule;
     [SerializeField] private FormationRule m_ArrowFormationRule;

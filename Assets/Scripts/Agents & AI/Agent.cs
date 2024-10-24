@@ -22,6 +22,7 @@ public class Agent : MonoBehaviour, IDamageable
     public int teamIndex => _teamIndex;
     public float maxHealth => _maxHealth;
     public float health => _health;
+    public bool isDead => _isDead;
 
     // ######################################### FUNCTIONS ########################################
 

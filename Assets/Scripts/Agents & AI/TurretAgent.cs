@@ -25,6 +25,11 @@ public class TurretAgent : Agent
         m_Rotator.rotation = Quaternion.Lerp(m_Rotator.rotation, _Rotation, Time.deltaTime * _rotationSpeed);
     }
 
+    private void Update()
+    {
+        if (_isDead) Destroy(gameObject);
+    }
+
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()
     {

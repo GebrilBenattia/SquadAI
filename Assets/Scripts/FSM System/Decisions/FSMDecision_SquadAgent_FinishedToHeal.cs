@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New FSMDecision_SquadAgent_FinishedToHeal", menuName = "FSM/Decisions/SquadAgent/FinishedToHeal", order = 0)]

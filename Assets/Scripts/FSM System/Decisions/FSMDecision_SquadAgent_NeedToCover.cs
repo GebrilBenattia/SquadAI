@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New FSMDecision_SquadAgent_NeedToCover", menuName = "FSM/Decisions/SquadAgent/NeedToCover", order = 0)]

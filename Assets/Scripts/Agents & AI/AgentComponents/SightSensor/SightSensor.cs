@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class SightSensor : MonoBehaviour
@@ -20,11 +17,8 @@ public class SightSensor : MonoBehaviour
 
     // ###################################### GETTER / SETTER #####################################
 
-    public Transform detectedAgent
-    {  get { return m_DetectedAgent; } }
-
-    public bool isAgentDetected
-    { get { return m_DetectedAgent != null; } }
+    public Transform detectedAgent => m_DetectedAgent;
+    public bool isAgentDetected => m_DetectedAgent != null;
 
     // ######################################### FUNCTIONS ########################################
 

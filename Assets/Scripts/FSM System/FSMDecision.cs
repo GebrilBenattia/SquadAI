@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public abstract class FSMDecision : ScriptableObject
 {
-    // ######################################### FUNCTIONS ########################################
+    // ######################################### FUNCTION ########################################
 
     public abstract bool Decide(FSMBaseStateMachine _StateMachine);
 }

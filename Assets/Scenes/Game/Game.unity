@@ -19766,7 +19766,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CameraArmProperties:
     target: {fileID: 746131748}
-    smoothing: 0.05
     posOffset: {x: 0, y: 13, z: -7}
     posOffsetScale: {x: 0.5, y: 2}
     zoomSpeed: 20
@@ -24158,7 +24157,7 @@ MonoBehaviour:
   m_LeaderAgent: {fileID: 746131750}
   m_SquadAgentPrefab: {fileID: 717157312602318015, guid: 0e2a6209a7328bc4ea9a33dc7e305a59,
     type: 3}
-  m_AgentCount: 10
+  m_AgentCount: 6
   m_CurrentFormationRule: {fileID: 11400000, guid: aecec5347aa3cde45b76a70197f6d2f6,
     type: 2}
   m_CircleFormationRule: {fileID: 11400000, guid: aecec5347aa3cde45b76a70197f6d2f6,
@@ -31697,6 +31696,11 @@ PrefabInstance:
       propertyPath: _maxHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 3709058823744820645, guid: 01a9e26fc483d8b438ec37291cf25825,
+        type: 3}
+      propertyPath: m_ViewCamera
+      value: 
+      objectReference: {fileID: 1388537711}
     - target: {fileID: 3709058823744820645, guid: 01a9e26fc483d8b438ec37291cf25825,
         type: 3}
       propertyPath: m_TextPlayerLife

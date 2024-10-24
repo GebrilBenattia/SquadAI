@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class TurretAgent : Agent
@@ -13,10 +11,8 @@ public class TurretAgent : Agent
 
     // ###################################### GETTER / SETTER #####################################
 
-    public Transform rotator
-    { get { return m_Rotator; } }
-    public Transform fireSocket
-    { get { return m_MuzzleSocket; } }
+    public Transform rotator => m_Rotator;
+    public Transform fireSocket => m_MuzzleSocket;
 
     // ######################################### FUNCTIONS ########################################
 

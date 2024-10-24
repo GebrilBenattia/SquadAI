@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 [CreateAssetMenu(fileName = "New FSMAction_SquadAgent_LookAtPoint", menuName = "FSM/Actions/SquadAgent/LookAtPoint", order = 0)]
 public class FSMAction_SquadAgent_LookAtPoint : FSMAction

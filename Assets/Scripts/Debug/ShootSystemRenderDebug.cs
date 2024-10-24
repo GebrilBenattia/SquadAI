@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,8 +6,6 @@ public class ShootSystemRenderDebug : MonoBehaviour
     // ######################################### SINGLETON ########################################
 
     private static ShootSystemRenderDebug m_Instance;
-    public static ShootSystemRenderDebug instance
-    { get { return m_Instance; } }
 
     // ######################################### VARIABLES ########################################
 
@@ -25,6 +21,8 @@ public class ShootSystemRenderDebug : MonoBehaviour
     [SerializeField] private Color m_ShootRadiusColor;
 
     // ###################################### GETTER / SETTER #####################################
+
+    public static ShootSystemRenderDebug instance => m_Instance;
 
     public bool enableRenderGizmos => m_EnableRenderGizmos;
     public bool enableDebug => m_EnableDebug;

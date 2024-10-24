@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "New FSMDecision_IsInShootRadius", menuName = "FSM/Decisions/IsInShootRadius", order = 0)]

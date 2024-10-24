@@ -1,7 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 [CreateAssetMenu(fileName = "New FSMAction_Turret_LookAtTarget", menuName = "FSM/Actions/Turret/LookAtTarget", order = 0)]
 public class FSMAction_Turret_LookAtTarget : FSMAction

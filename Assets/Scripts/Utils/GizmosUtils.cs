@@ -2,6 +2,8 @@ using UnityEngine;
 
 public static class GizmosUtils
 {
+    // ######################################### FUNCTIONS ########################################
+
     public static void RenderTriangle(Vector3 _A, Vector3 _B, Vector3 _C)
     {
         Gizmos.DrawLine(_A, _B);

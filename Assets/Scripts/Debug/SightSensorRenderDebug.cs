@@ -8,8 +8,6 @@ public class SightSensorRenderDebug : MonoBehaviour
     // ######################################### SINGLETON ########################################
 
     private static SightSensorRenderDebug m_Instance;
-    public static SightSensorRenderDebug instance
-    { get { return m_Instance; } }
 
     // ######################################### VARIABLES ########################################
 
@@ -31,6 +29,8 @@ public class SightSensorRenderDebug : MonoBehaviour
     [SerializeField] private Color m_LineToTargetColor;
 
     // ###################################### GETTER / SETTER #####################################
+
+    public static SightSensorRenderDebug instance => m_Instance;
 
     public bool enableRenderGizmos => m_EnableRenderGizmos;
     public bool enableDebug => m_EnableDebug;

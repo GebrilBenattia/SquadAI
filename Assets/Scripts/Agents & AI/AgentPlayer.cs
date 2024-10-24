@@ -5,6 +5,7 @@ public class AgentPlayer : Agent
 {
     [Header("References")]
     [SerializeField] private TextMeshProUGUI m_TextPlayerLife;
+    [SerializeField] private Camera m_ViewCamera;
 
     // Agent Player Settings
     [Header("Agent Player Settings")]
@@ -32,7 +33,7 @@ public class AgentPlayer : Agent
 
     private void FaceMouse()
     {
-        m_LookAtPos = MouseUtilities.GetMouseWorldPos();
+        m_LookAtPos = MouseUtilities.GetMouseWorldPos(m_ViewCamera);
         Vector3 directionToFace = m_LookAtPos - transform.position;
 
         // Ensure we only rotate on the Y-axis (no vertical rotation)
